@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "225569367882",
+    "project_id": "pactplanet",
+    "storage_bucket": "pactplanet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:225569367882:android:9ef8f5859ef5ff42a083b3",
+        "android_client_info": {
+          "package_name": "com.pactplanet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "225569367882-g88q6l44jmc4rhv8vlfh66at9rqir2u7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu9Z3AlvW4CrHjYatfxwbU3NL7SNq3W18"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "225569367882-g88q6l44jmc4rhv8vlfh66at9rqir2u7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
