@@ -6,10 +6,31 @@ import {
   ScrollView,
   StatusBar,
   Text,
-  Button,
   ActivityIndicator,
 } from 'react-native';
 import {useFirebaseUserAuth} from '../contexts/Auth';
+import Button from '../components/buttons/Button';
+
+const style = StyleSheet.create({
+  content: {
+    flex: 1,
+    backgroundColor: '#F9FEFF',
+  },
+  buttonContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  sectionContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  body: {flex: 1, justifyContent: 'center', alignItems: 'center'},
+  scrollView: {flex: 1},
+  button: {
+    backgroundColor: 'red',
+  },
+});
 
 const LoginScene = (): JSX.Element => {
   const {signInWithEmailAndPassword, initializing, currentUser} =
@@ -37,8 +58,10 @@ const LoginScene = (): JSX.Element => {
             </Text>
             <View style={styles.sectionContainer}>
               <Button
+                style={style.button}
                 onPress={handleSignInButtonPressed}
-                title="SignIn"></Button>
+                text="Sign In"
+                variant={'primary'}></Button>
               {initializing && (
                 <View>
                   <ActivityIndicator size="large" color="#00ff00" />
