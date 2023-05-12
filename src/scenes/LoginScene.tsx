@@ -30,6 +30,17 @@ const style = StyleSheet.create({
   button: {
     backgroundColor: 'red',
   },
+  loginUserTitle: {
+    color: 'black',
+    paddingVertical: 40,
+    fontSize: 28,
+  },
+  contentContainerStyle: {
+    padding: 40,
+  },
+  loggInStatusText: {
+    color: 'black',
+  },
 });
 
 const LoginScene = (): JSX.Element => {
@@ -51,9 +62,9 @@ const LoginScene = (): JSX.Element => {
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}
-          contentContainerStyle={{padding: 40}}>
+          contentContainerStyle={style.contentContainerStyle}>
           <View style={styles.body}>
-            <Text style={{color: 'black', paddingVertical: 40, fontSize: 28}}>
+            <Text style={style.loginUserTitle}>
               {currentUser ? currentUser.email : 'Login'}
             </Text>
             <View style={styles.sectionContainer}>
@@ -61,7 +72,8 @@ const LoginScene = (): JSX.Element => {
                 style={style.button}
                 onPress={handleSignInButtonPressed}
                 text="Sign In"
-                variant={'primary'}></Button>
+                variant={'primary'}
+              />
               {initializing && (
                 <View>
                   <ActivityIndicator size="large" color="#00ff00" />
@@ -69,7 +81,9 @@ const LoginScene = (): JSX.Element => {
               )}
             </View>
             <View style={styles.buttonContainer}>
-              <Text style={{color: 'black'}}>You are currently logged out</Text>
+              <Text style={style.loggInStatusText}>
+                You are currently logged out
+              </Text>
             </View>
           </View>
         </ScrollView>

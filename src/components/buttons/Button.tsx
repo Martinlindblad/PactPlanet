@@ -1,5 +1,12 @@
 import React, {FC} from 'react';
-import {Pressable, Text, StyleSheet, StyleProp, ViewStyle} from 'react-native';
+import {
+  Pressable,
+  Text,
+  StyleSheet,
+  StyleProp,
+  ViewStyle,
+  PressableProps,
+} from 'react-native';
 
 type ButtonVariant = 'primary' | 'secondary' | 'link';
 
@@ -8,13 +15,24 @@ interface ButtonProps {
   style?: StyleProp<ViewStyle>;
   text: string;
   onPress: () => void;
+  buttonProps?: PressableProps;
+  disabled?: boolean;
 }
 
-const Button: FC<ButtonProps> = ({variant, style, text, onPress}) => {
+const Button: FC<ButtonProps> = ({
+  variant,
+  style,
+  text,
+  onPress,
+  buttonProps,
+  disabled,
+}) => {
   const buttonStyles = [styles.button, styles[variant], style];
 
   return (
     <Pressable
+      {...buttonProps}
+      disabled={disabled}
       onPress={onPress}
       style={({pressed}) => [{opacity: pressed ? 0.5 : 1}, buttonStyles]}>
       <Text style={styles.text}>{text}</Text>

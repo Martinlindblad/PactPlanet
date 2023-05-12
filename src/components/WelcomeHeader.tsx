@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
 const WelcomeHeader = (): JSX.Element => {
   return (
     <View style={styles.welcomeContainer}>
-      <View style={styles.imageContainer}></View>
+      <View style={styles.imageContainer} />
       <View>
         <Text style={styles.headerText}>Pact planet</Text>
         <Text style={styles.subtitle}>Sir.</Text>
