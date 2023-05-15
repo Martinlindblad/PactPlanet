@@ -1,4 +1,5 @@
 package com.pactplanet;
+import expo.modules.ReactActivityDelegateWrapper;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -15,7 +16,6 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "PactPlanet";
   }
-
   /**
  * Returns the instance of the {@link ReactActivityDelegate}. Here we use a util class {@link
    * DefaultReactActivityDelegate} which allows you to easily enable Fabric and Concurrent React
@@ -23,13 +23,13 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected ReactActivityDelegate createReactActivityDelegate() {
-    return new DefaultReactActivityDelegate(
+    return new ReactActivityDelegateWrapper(this, BuildConfig.IS_NEW_ARCHITECTURE_ENABLED, new DefaultReactActivityDelegate(
       this,
       getMainComponentName(),
       // If you opted-in for the New Architecture, we enable the Fabric Renderer.
       DefaultNewArchitectureEntryPoint.getFabricEnabled(), // fabricEnabled
       // If you opted-in for the New Architecture, we enable Concurrent React (i.e. React 18).
       DefaultNewArchitectureEntryPoint.getConcurrentReactEnabled() // concurrentRootEnabled
-      );
+      ));
   }
 }

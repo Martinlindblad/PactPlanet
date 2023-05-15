@@ -2,8 +2,8 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import OnboardingStack from './OnboardingStack';
 import ContentStack from './ContentStack';
-import LoginStack from './LoginStack';
 import {useFirebaseUserAuth} from '../contexts/Auth';
+import AuthStack from './AuthStack';
 
 const Stack = createStackNavigator();
 
@@ -27,8 +27,8 @@ function Router(): JSX.Element {
         </>
       ) : (
         <Stack.Screen
-          name="Login"
-          component={LoginStack}
+          name="Auth"
+          component={AuthStack}
           options={{headerShown: false}}
         />
       )}

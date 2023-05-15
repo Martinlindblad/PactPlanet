@@ -1,7 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import LoginScene from 'src/scenes/LoginScene';
+import LoginScene from 'src/scenes/AuthStack/LoginScene';
 import LoginEmailPasswordScene from 'src/scenes/AuthStack/LoginEmailPasswordScene';
 import {AuthStackParamList} from 'src/types/navigation/AuthStackParamList';
 import {useFirebaseUserAuth} from 'src/contexts/Auth';

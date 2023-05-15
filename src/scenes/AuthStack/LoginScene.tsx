@@ -1,3 +1,4 @@
+import {LinearGradient} from 'expo-linear-gradient';
 import React, {useCallback} from 'react';
 import {
   SafeAreaView,
@@ -8,8 +9,8 @@ import {
   Text,
   ActivityIndicator,
 } from 'react-native';
-import {useFirebaseUserAuth} from '../contexts/Auth';
-import Button from '../components/buttons/Button';
+import Button from 'src/components/buttons/Button';
+import {useFirebaseUserAuth} from 'src/contexts/Auth';
 
 const style = StyleSheet.create({
   content: {
@@ -22,24 +23,27 @@ const style = StyleSheet.create({
   },
   sectionContainer: {
     justifyContent: 'center',
-    alignItems: 'center',
+    flexDirection: 'row',
+    width: '100%',
   },
-
-  body: {flex: 1, justifyContent: 'center', alignItems: 'center'},
+  body: {justifyContent: 'center', alignItems: 'center'},
   scrollView: {flex: 1},
-  button: {
-    backgroundColor: 'red',
-  },
-  loginUserTitle: {
-    color: 'black',
-    paddingVertical: 40,
-    fontSize: 28,
-  },
   contentContainerStyle: {
-    padding: 40,
+    flexGrow: 1,
+    justifyContent: 'center',
   },
   loggInStatusText: {
-    color: 'black',
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#000',
+  },
+  button: {marginBottom: 10, marginHorizontal: 20},
+  loginUserTitle: {fontSize: 20, fontWeight: 'bold', color: '#000'},
+  gradientBackground: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'transparent',
   },
 });
 
@@ -56,22 +60,39 @@ const LoginScene = (): JSX.Element => {
   }, [signInWithEmailAndPassword]);
 
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={styles.content}>
+    <View>
+      <View style={style.container}>
+        <LinearGradient
+          // Background Linear Gradient
+          colors={['rgba(0,0,0,0.8)', 'transparent']}
+          style={style.background}
+        />
+        <LinearGradient
+          // Button Linear Gradient
+          colors={['#4c669f', '#3b5998', '#192f6a']}
+          style={style.button}>
+          <Text style={style.text}>Sign in with Facebook</Text>
+        </LinearGradient>
+      </View>
+      <SafeAreaView style={style.content}>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}
-          contentContainerStyle={style.contentContainerStyle}>
-          <View style={styles.body}>
+          style={style.scrollView}>
+          <View style={style.body}>
             <Text style={style.loginUserTitle}>
               {currentUser ? currentUser.email : 'Login'}
             </Text>
-            <View style={styles.sectionContainer}>
+            <View style={style.sectionContainer}>
               <Button
                 style={style.button}
                 onPress={handleSignInButtonPressed}
-                text="Sign In"
+                text="Logga in med BankID"
+                variant={'primary'}
+              />
+              <Button
+                style={style.button}
+                onPress={handleSignInButtonPressed}
+                text="Annan inloggning"
                 variant={'primary'}
               />
               {initializing && (
@@ -80,7 +101,7 @@ const LoginScene = (): JSX.Element => {
                 </View>
               )}
             </View>
-            <View style={styles.buttonContainer}>
+            <View style={style.buttonContainer}>
               <Text style={style.loggInStatusText}>
                 You are currently logged out
               </Text>
@@ -88,25 +109,8 @@ const LoginScene = (): JSX.Element => {
           </View>
         </ScrollView>
       </SafeAreaView>
-    </>
+    </View>
   );
 };
 
 export default LoginScene;
-
-const styles = StyleSheet.create({
-  content: {
-    flex: 1,
-    backgroundColor: '#F9FEFF',
-  },
-  buttonContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  sectionContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  body: {flex: 1, justifyContent: 'center', alignItems: 'center'},
-  scrollView: {flex: 1},
-});
