@@ -1,18 +1,13 @@
+import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
 import {LinearGradient} from 'expo-linear-gradient';
 import React, {useCallback} from 'react';
-import {
-  SafeAreaView,
-  View,
-  StyleSheet,
-  ScrollView,
-  StatusBar,
-  Text,
-  ActivityIndicator,
-} from 'react-native';
+import {SafeAreaView, View, StyleSheet, ScrollView, Text} from 'react-native';
 import Button from 'src/components/buttons/Button';
-import {useFirebaseUserAuth} from 'src/contexts/Auth';
+import {AuthStackParamList} from 'src/types/navigation/AuthStackParamList';
 
 const style = StyleSheet.create({
+  root: {flex: 1, backgroundColor: '#F9FEFF'},
   content: {
     flex: 1,
     backgroundColor: '#F9FEFF',
@@ -23,7 +18,9 @@ const style = StyleSheet.create({
   },
   sectionContainer: {
     justifyContent: 'center',
+    alignItems: 'center',
     flexDirection: 'row',
+    paddingHorizontal: 26,
     width: '100%',
   },
   body: {justifyContent: 'center', alignItems: 'center'},
@@ -37,7 +34,7 @@ const style = StyleSheet.create({
     fontWeight: 'bold',
     color: '#000',
   },
-  button: {marginBottom: 10, marginHorizontal: 20},
+  button: {marginBottom: 10, marginHorizontal: 20, borderRadius: 18},
   loginUserTitle: {fontSize: 20, fontWeight: 'bold', color: '#000'},
   gradientBackground: {
     flex: 1,
@@ -48,67 +45,51 @@ const style = StyleSheet.create({
 });
 
 const LoginScene = (): JSX.Element => {
-  const {signInWithEmailAndPassword, initializing, currentUser} =
-    useFirebaseUserAuth();
+  const navigation =
+    useNavigation<StackNavigationProp<AuthStackParamList, 'Login'>>();
 
-  const handleSignInButtonPressed = useCallback(() => {
-    const email = 'martin.l@test.com';
-    const password = 'DevTest';
-    const params = {email, password};
+  const handleSignInWithBankIDButtonPressed = useCallback(() => {
+    navigation.navigate('LoginWithBankID');
+  }, [navigation]);
 
-    signInWithEmailAndPassword(params);
-  }, [signInWithEmailAndPassword]);
+  const handleSignInWithOtherMethodButtonPressed = useCallback(() => {
+    navigation.navigate('LoginWithBankID');
+  }, [navigation]);
 
   return (
-    <View>
-      <View style={style.container}>
-        <LinearGradient
-          // Background Linear Gradient
-          colors={['rgba(0,0,0,0.8)', 'transparent']}
-          style={style.background}
-        />
-        <LinearGradient
-          // Button Linear Gradient
-          colors={['#4c669f', '#3b5998', '#192f6a']}
-          style={style.button}>
-          <Text style={style.text}>Sign in with Facebook</Text>
-        </LinearGradient>
-      </View>
-      <SafeAreaView style={style.content}>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={style.scrollView}>
-          <View style={style.body}>
-            <Text style={style.loginUserTitle}>
-              {currentUser ? currentUser.email : 'Login'}
-            </Text>
-            <View style={style.sectionContainer}>
-              <Button
-                style={style.button}
-                onPress={handleSignInButtonPressed}
-                text="Logga in med BankID"
-                variant={'primary'}
-              />
-              <Button
-                style={style.button}
-                onPress={handleSignInButtonPressed}
-                text="Annan inloggning"
-                variant={'primary'}
-              />
-              {initializing && (
-                <View>
-                  <ActivityIndicator size="large" color="#00ff00" />
-                </View>
-              )}
+    <View style={style.root}>
+      <LinearGradient
+        // Background Linear Gradient
+        colors={['rgba(0,0,0,0.8)', 'transparent']}
+        style={style.gradientBackground}>
+        <SafeAreaView style={style.content}>
+          <ScrollView
+            contentInsetAdjustmentBehavior="automatic"
+            style={style.scrollView}>
+            <View style={style.body}>
+              <View style={style.sectionContainer}>
+                <Button
+                  style={style.button}
+                  onPress={handleSignInWithBankIDButtonPressed}
+                  text="Logga in med BankID"
+                  variant={'primary'}
+                />
+                <Button
+                  style={style.button}
+                  onPress={handleSignInWithOtherMethodButtonPressed}
+                  text="Annan inloggning"
+                  variant={'primary'}
+                />
+              </View>
+              <View style={style.buttonContainer}>
+                <Text style={style.loggInStatusText}>
+                  Du är förnuvarande utloggad
+                </Text>
+              </View>
             </View>
-            <View style={style.buttonContainer}>
-              <Text style={style.loggInStatusText}>
-                You are currently logged out
-              </Text>
-            </View>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
+          </ScrollView>
+        </SafeAreaView>
+      </LinearGradient>
     </View>
   );
 };

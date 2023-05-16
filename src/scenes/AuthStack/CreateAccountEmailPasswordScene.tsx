@@ -8,7 +8,6 @@ import {
   StyleSheet,
   ScrollView,
   TextInput,
-  ActivityIndicator,
 } from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
@@ -19,8 +18,9 @@ import {useFirebaseUserAuth} from 'src/contexts/Auth';
 import Button from 'src/components/buttons/Button';
 import {AxiosError} from 'axios';
 import {StackNavigationProp} from '@react-navigation/stack';
+import {ActivityIndicator} from 'react-native';
 
-type LoginForm = {
+type CreateAccountForm = {
   email: string;
   password: string;
 };
@@ -48,12 +48,12 @@ const LoginEmailPassword = ({}: {
 
   const navigation =
     useNavigation<
-      StackNavigationProp<AuthStackParamList, 'LoginEmailPassword'>
+      StackNavigationProp<AuthStackParamList, 'CreateAccountEmailPassword'>
     >();
 
   const passwordRef = useRef<TextInput>(null);
 
-  const {signInWithEmailAndPassword, initializing, currentUser} =
+  const {createUserWithEmailAndPassword, initializing, currentUser} =
     useFirebaseUserAuth();
 
   useEffect(() => {
@@ -61,13 +61,14 @@ const LoginEmailPassword = ({}: {
       navigation.navigate('Home');
     }
   }, [currentUser, navigation]);
-  const [isLoggingIn, setIsLoggingIn] = useState(false);
+
+  const [isCreating, setIsCreatingIn] = useState(false);
   const [_error, setError] = useState<AxiosError<{
     error: string;
     error_description: string;
   }> | null>(null);
 
-  const {watch, control, handleSubmit} = useForm<LoginForm>({
+  const {watch, control, handleSubmit} = useForm<CreateAccountForm>({
     defaultValues: {
       email: 'martin.l@test.com',
       password: 'DevTest',
@@ -76,17 +77,17 @@ const LoginEmailPassword = ({}: {
 
   const [email, password] = watch(['email', 'password']);
 
-  const handleLogin = useCallback(
-    (data: LoginForm) => {
+  const handleCreateAccount = useCallback(
+    (data: CreateAccountForm) => {
       if (data.email && data.password) {
-        setIsLoggingIn(true);
+        setIsCreatingIn(true);
 
         const params = {email: data.email, password: data.password};
 
-        signInWithEmailAndPassword(params);
+        return createUserWithEmailAndPassword(params);
       }
     },
-    [signInWithEmailAndPassword],
+    [createUserWithEmailAndPassword],
   );
 
   useEffect(() => {
@@ -104,7 +105,7 @@ const LoginEmailPassword = ({}: {
     };
   }, [screenHeight, screenWidth, topInset]);
 
-  const loginButtonContainerStyle = useMemo(() => {
+  const createAccountButtonContainerStyle = useMemo(() => {
     return {
       paddingHorizontal: 20,
       paddingBottom: bottomInset,
@@ -181,7 +182,7 @@ const LoginEmailPassword = ({}: {
                   secureTextEntry
                   placeholderTextColor={'#BBB'}
                   style={[styles.input]}
-                  onSubmitEditing={handleSubmit(handleLogin)}>
+                  onSubmitEditing={handleSubmit(handleCreateAccount)}>
                   <PPText
                     style={[
                       styles.inputLabel,
@@ -196,12 +197,12 @@ const LoginEmailPassword = ({}: {
               name="password"
             />
           </View>
-          <View style={loginButtonContainerStyle}>
+          <View style={createAccountButtonContainerStyle}>
             <Button
-              disabled={isLoggingIn}
-              text="Logga in"
+              disabled={isCreating}
+              text="Skapa konto"
               style={{marginBottom: 10, paddingVertical: 16, borderWidth: 0}}
-              onPress={handleSubmit(handleLogin)}
+              onPress={handleSubmit(handleCreateAccount)}
               variant={'primary'}
             />
             {initializing && (
@@ -229,7 +230,8 @@ const LoginEmailPassword = ({}: {
                 fontWeight: '500',
               },
             ]}>
-            Om du inte har Bank-ID kan du logga in med e-post och lösenord.
+            Om du inte har Bank-ID kan du skapa ett konto med e-post och
+            lösenord.
           </PPText>
         </View>
       </View>

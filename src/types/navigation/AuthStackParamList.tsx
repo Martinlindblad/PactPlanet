@@ -5,4 +5,6 @@ export interface AuthStackParamList extends ParamListBase {
   LoginEmailPassword: undefined;
   Timeout: undefined;
   Login: undefined;
+  CreateAccountEmailPassword: undefined;
+  Home: undefined;
 }
