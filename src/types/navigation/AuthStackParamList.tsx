@@ -8,4 +8,5 @@ export interface AuthStackParamList extends ParamListBase {
   Login: undefined;
   CreateAccountEmailPassword: undefined;
   Home: undefined;
+  Register: undefined;
 }

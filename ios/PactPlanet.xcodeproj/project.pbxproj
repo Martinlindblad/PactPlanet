@@ -14,6 +14,17 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-PactPlanet-PactPlanetTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-PactPlanet-PactPlanetTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		1D580156E0504DDCB6A5CD1C /* Commissioner-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CC4024432884203997C09A4 /* Commissioner-Black.ttf */; };
+		742933CBACA742D085CD8CCF /* Commissioner-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0BE9512AF124A2D92492B47 /* Commissioner-Bold.ttf */; };
+		C3137119CEBD48B4BDDC646C /* Commissioner-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BBD682DA2DC46158EB8A4F2 /* Commissioner-ExtraBold.ttf */; };
+		4541CF84C6E94628BAE5073B /* Commissioner-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E10F43F4F844926B00629DC /* Commissioner-ExtraLight.ttf */; };
+		5BEE8935187A41E3A6E48FF7 /* Commissioner-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D96FEB13D2F940DBB1056431 /* Commissioner-Light.ttf */; };
+		2B36E0899D4D4E11AB8722D6 /* Commissioner-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86A204F9EEB7494E8BD3C941 /* Commissioner-Medium.ttf */; };
+		A8306748A49F43B3B6CD5CE5 /* Commissioner-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 035A2B67F726436EAAD7125D /* Commissioner-Regular.ttf */; };
+		05B1F54048404D6583D26DDD /* Commissioner-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFBBE959DC0847778B0AAE0C /* Commissioner-SemiBold.ttf */; };
+		437425986AF24D47955FFB3F /* Commissioner-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4290039430E44F5BFCB99AE /* Commissioner-Thin.ttf */; };
+		506A50039B2044948903FAFC /* Condiment-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47AD857399EF41C4BFC34A82 /* Condiment-Regular.ttf */; };
+		82C8A0B3260447D493DF14B1 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A83E766A2D448F396186A89 /* OFL.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +55,17 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PactPlanet/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-PactPlanet-PactPlanetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PactPlanet-PactPlanetTests.release.xcconfig"; path = "Target Support Files/Pods-PactPlanet-PactPlanetTests/Pods-PactPlanet-PactPlanetTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		9CC4024432884203997C09A4 /* Commissioner-Black.ttf */ = {isa = PBXFileReference; name = "Commissioner-Black.ttf"; path = "../assets/fonts/Commissioner-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B0BE9512AF124A2D92492B47 /* Commissioner-Bold.ttf */ = {isa = PBXFileReference; name = "Commissioner-Bold.ttf"; path = "../assets/fonts/Commissioner-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5BBD682DA2DC46158EB8A4F2 /* Commissioner-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Commissioner-ExtraBold.ttf"; path = "../assets/fonts/Commissioner-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4E10F43F4F844926B00629DC /* Commissioner-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Commissioner-ExtraLight.ttf"; path = "../assets/fonts/Commissioner-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D96FEB13D2F940DBB1056431 /* Commissioner-Light.ttf */ = {isa = PBXFileReference; name = "Commissioner-Light.ttf"; path = "../assets/fonts/Commissioner-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		86A204F9EEB7494E8BD3C941 /* Commissioner-Medium.ttf */ = {isa = PBXFileReference; name = "Commissioner-Medium.ttf"; path = "../assets/fonts/Commissioner-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		035A2B67F726436EAAD7125D /* Commissioner-Regular.ttf */ = {isa = PBXFileReference; name = "Commissioner-Regular.ttf"; path = "../assets/fonts/Commissioner-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EFBBE959DC0847778B0AAE0C /* Commissioner-SemiBold.ttf */ = {isa = PBXFileReference; name = "Commissioner-SemiBold.ttf"; path = "../assets/fonts/Commissioner-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B4290039430E44F5BFCB99AE /* Commissioner-Thin.ttf */ = {isa = PBXFileReference; name = "Commissioner-Thin.ttf"; path = "../assets/fonts/Commissioner-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		47AD857399EF41C4BFC34A82 /* Condiment-Regular.ttf */ = {isa = PBXFileReference; name = "Condiment-Regular.ttf"; path = "../assets/fonts/Condiment-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3A83E766A2D448F396186A89 /* OFL.txt */ = {isa = PBXFileReference; name = "OFL.txt"; path = "../assets/fonts/OFL.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +144,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				DC858492D5704D8F89A0CCF8 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +170,25 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		DC858492D5704D8F89A0CCF8 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				9CC4024432884203997C09A4 /* Commissioner-Black.ttf */,
+				B0BE9512AF124A2D92492B47 /* Commissioner-Bold.ttf */,
+				5BBD682DA2DC46158EB8A4F2 /* Commissioner-ExtraBold.ttf */,
+				4E10F43F4F844926B00629DC /* Commissioner-ExtraLight.ttf */,
+				D96FEB13D2F940DBB1056431 /* Commissioner-Light.ttf */,
+				86A204F9EEB7494E8BD3C941 /* Commissioner-Medium.ttf */,
+				035A2B67F726436EAAD7125D /* Commissioner-Regular.ttf */,
+				EFBBE959DC0847778B0AAE0C /* Commissioner-SemiBold.ttf */,
+				B4290039430E44F5BFCB99AE /* Commissioner-Thin.ttf */,
+				47AD857399EF41C4BFC34A82 /* Condiment-Regular.ttf */,
+				3A83E766A2D448F396186A89 /* OFL.txt */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -245,6 +287,17 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				1D580156E0504DDCB6A5CD1C /* Commissioner-Black.ttf in Resources */,
+				742933CBACA742D085CD8CCF /* Commissioner-Bold.ttf in Resources */,
+				C3137119CEBD48B4BDDC646C /* Commissioner-ExtraBold.ttf in Resources */,
+				4541CF84C6E94628BAE5073B /* Commissioner-ExtraLight.ttf in Resources */,
+				5BEE8935187A41E3A6E48FF7 /* Commissioner-Light.ttf in Resources */,
+				2B36E0899D4D4E11AB8722D6 /* Commissioner-Medium.ttf in Resources */,
+				A8306748A49F43B3B6CD5CE5 /* Commissioner-Regular.ttf in Resources */,
+				05B1F54048404D6583D26DDD /* Commissioner-SemiBold.ttf in Resources */,
+				437425986AF24D47955FFB3F /* Commissioner-Thin.ttf in Resources */,
+				506A50039B2044948903FAFC /* Condiment-Regular.ttf in Resources */,
+				82C8A0B3260447D493DF14B1 /* OFL.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

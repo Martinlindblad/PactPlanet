@@ -10,7 +10,7 @@ import {
   TextStyle,
 } from 'react-native';
 
-type ButtonVariant = 'primary' | 'secondary' | 'link';
+type ButtonVariant = 'primary' | 'secondary' | 'link' | 'ghost';
 
 interface ButtonProps {
   variant: ButtonVariant;
@@ -75,6 +75,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 20,
     minWidth: 100,
+    maxHeight: 45,
   },
 
   primary: {
@@ -94,7 +95,8 @@ const styles = StyleSheet.create({
   text: {
     color: '#2f2f2f',
     fontSize: 14,
-    fontWeight: 'bold',
+    lineHeight: 18,
+    fontFamily: 'Commissioner-Bold',
   },
   border: {
     borderRadius: 26,
@@ -102,6 +104,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     borderWidth: 2,
     borderColor: 'white',
+    flexShrink: 1,
   },
 });
 
