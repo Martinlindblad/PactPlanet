@@ -3,8 +3,13 @@ import React from 'react';
 import Compose from '../utils/Compose';
 import {Provider as FirebaseAuthProvider} from '../contexts/Auth';
 import Router from '../navigation/Router';
+import {useFonts} from 'expo-font';
 
 function App(): JSX.Element {
+  useFonts({
+    Montserrat: require('./assets/fonts/Yatra-One.ttf'),
+  });
+
   return <Router />;
 }
 

@@ -1,3 +1,4 @@
+import {LinearGradient} from 'expo-linear-gradient';
 import React, {FC} from 'react';
 import {
   Pressable,
@@ -6,6 +7,7 @@ import {
   StyleProp,
   ViewStyle,
   PressableProps,
+  TextStyle,
 } from 'react-native';
 
 type ButtonVariant = 'primary' | 'secondary' | 'link';
@@ -13,6 +15,8 @@ type ButtonVariant = 'primary' | 'secondary' | 'link';
 interface ButtonProps {
   variant: ButtonVariant;
   style?: StyleProp<ViewStyle>;
+  borderStyle?: StyleProp<ViewStyle>;
+  textStyle?: StyleProp<TextStyle>;
   text: string;
   onPress: () => void;
   buttonProps?: PressableProps;
@@ -26,7 +30,22 @@ const Button: FC<ButtonProps> = ({
   onPress,
   buttonProps,
   disabled,
+  borderStyle,
+  textStyle,
 }) => {
+  const backgroundColors = {
+    primary: ['#00FFFF', '#17C8FF', '#329BFF'],
+    secondary: ['#4CAF50', '#4CAF50'],
+    ghost: ['transparent', 'transparent'],
+    link: ['transparent', 'transparent'],
+  };
+  const borderColors = {
+    primary: '#17C8FF',
+    secondary: '#4CAF50',
+    ghost: 'transparent',
+    link: 'transparent',
+  };
+
   const buttonStyles = [styles.button, styles[variant], style];
 
   return (
@@ -35,33 +54,54 @@ const Button: FC<ButtonProps> = ({
       disabled={disabled}
       onPress={onPress}
       style={({pressed}) => [{opacity: pressed ? 0.5 : 1}, buttonStyles]}>
-      <Text style={styles.text}>{text}</Text>
+      <LinearGradient
+        colors={backgroundColors[variant]}
+        start={{x: 0.0, y: 1.0}}
+        end={{x: 1.0, y: 1.5}}
+        style={[
+          borderStyle,
+          styles.border,
+          {borderColor: borderColors[variant]},
+        ]}>
+        <Text style={[styles.text, textStyle]}>{text}</Text>
+      </LinearGradient>
     </Pressable>
   );
 };
 
 const styles = StyleSheet.create({
   button: {
-    padding: 10,
-    borderRadius: 5,
     alignItems: 'center',
     justifyContent: 'center',
+    borderRadius: 20,
     minWidth: 100,
   },
+
   primary: {
     backgroundColor: '#2196F3',
   },
   secondary: {
     backgroundColor: '#4CAF50',
   },
+  ghost: {
+    backgroundColor: 'transparent',
+  },
   link: {
     backgroundColor: 'transparent',
-    borderWidth: 1,
+    borderBottomWidth: 1,
     borderColor: '#2196F3',
   },
   text: {
-    color: '#fff',
-    fontSize: 16,
+    color: '#2f2f2f',
+    fontSize: 14,
+    fontWeight: 'bold',
+  },
+  border: {
+    borderRadius: 26,
+    paddingVertical: 6,
+    paddingHorizontal: 16,
+    borderWidth: 2,
+    borderColor: 'white',
   },
 });
 
