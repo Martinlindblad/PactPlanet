@@ -2,14 +2,7 @@ import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {LinearGradient} from 'expo-linear-gradient';
 import React, {useCallback} from 'react';
-import {
-  SafeAreaView,
-  View,
-  StyleSheet,
-  ScrollView,
-  Text,
-  Pressable,
-} from 'react-native';
+import {SafeAreaView, View, StyleSheet, ScrollView, Text} from 'react-native';
 import Button from 'src/components/buttons/Button';
 import {AuthStackParamList} from 'src/types/navigation/AuthStackParamList';
 

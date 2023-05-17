@@ -1,5 +1,6 @@
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
+import RenderIllustration from './RenderIllustration';
 
 const styles = StyleSheet.create({
   welcomeContainer: {
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
 const WelcomeHeader = (): JSX.Element => {
   return (
     <View style={styles.welcomeContainer}>
-      <View style={styles.imageContainer} />
+      <RenderIllustration />
       <View>
         <Text style={styles.headerText}>Pact planet</Text>
         <Text style={styles.subtitle}>Sir.</Text>

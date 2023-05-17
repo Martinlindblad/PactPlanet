@@ -1,6 +1,6 @@
 import React, {useCallback, useMemo} from 'react';
 import {SafeAreaView, View, StyleSheet, FlatList} from 'react-native';
-import WelcomeHeader from '../components/WelcomeHeader';
+import WelcomeHeader from '../../components/WelcomeHeader';
 
 const HomeScene = (): JSX.Element => {
   const sections = useMemo(() => {
