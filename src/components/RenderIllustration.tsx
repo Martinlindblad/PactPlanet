@@ -1,17 +1,19 @@
 import React from 'react';
 import {View} from 'react-native';
-import Svg, {Image} from 'react-native-svg';
+import {SvgProps} from 'react-native-svg';
 
-const RenderIllustration = () => {
+const RenderIllustration = ({
+  Svg,
+  width = 200,
+  height = 200,
+}: {
+  width?: number;
+  height?: number;
+  Svg: React.FC<SvgProps>;
+}) => {
   return (
     <View style={{alignItems: 'center'}}>
-      <Svg width={200} height={200}>
-        <Image
-          href={require('./assets/svg/illustrations/share_knowledge.svg')}
-          width={200}
-          height={200}
-        />
-      </Svg>
+      <Svg width={width} height={height} />
     </View>
   );
 };

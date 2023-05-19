@@ -1,18 +1,13 @@
 import React, {useCallback, useMemo} from 'react';
-import {
-  SafeAreaView,
-  View,
-  Text,
-  StyleSheet,
-  FlatList,
-  Pressable,
-} from 'react-native';
+import {SafeAreaView, View, Text, StyleSheet, FlatList} from 'react-native';
 
 import GetStarted from 'src/../assets/onboardingSlides/GetStarted';
 import Security from 'src/../assets/onboardingSlides/Security';
 import WhyPactPlanet from 'src/../assets/onboardingSlides/WhyPactPlanet';
 import Flexibility from 'src/../assets/onboardingSlides/Flexibility';
 import Networking from 'src/../assets/onboardingSlides/Networking';
+import {OnboardingSlide} from 'src/types/Onboarding';
+import RenderIllustration from 'src/components/RenderIllustration';
 
 const OnboardingScene = (): JSX.Element => {
   const sections = useMemo(() => {
@@ -20,20 +15,18 @@ const OnboardingScene = (): JSX.Element => {
       item => item.slide,
     );
   }, []);
-  // const welcomePressed = useCallback(() => {}, []);
-  const renderSection = useCallback(({item}: {item: any}) => {
+  const renderSlide = useCallback(({item}: {item: OnboardingSlide}) => {
     return (
-      <Pressable>
-        <View style={styles.content}>
-          <Text>{item.title}</Text>
-        </View>
-      </Pressable>
+      <View style={styles.content}>
+        <Text>{item.title}</Text>
+        <RenderIllustration Svg={item.visual} />
+      </View>
     );
   }, []);
 
   return (
     <SafeAreaView style={{flex: 1}}>
-      <FlatList data={sections} renderItem={renderSection} />
+      <FlatList data={sections} horizontal renderItem={renderSlide} />
     </SafeAreaView>
   );
 };
@@ -41,16 +34,9 @@ const OnboardingScene = (): JSX.Element => {
 export default OnboardingScene;
 
 const styles = StyleSheet.create({
-  welcomeContainer: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-  },
   content: {
     flex: 1,
-    backgroundColor: 'pink',
+    backgroundColor: '#D3D3D3',
     alignItems: 'center',
     justifyContent: 'center',
     width: '100%',
