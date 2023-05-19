@@ -1,4 +1,4 @@
-import happyAnnoucement from '../svg/illustrations/happyAnnoucement.svg';
+import happyAnnoucement from '../svg/illustrations/happy_annoucement.svg';
 const Flexibility = {
   slide: 5,
   title: 'Åtkomst till avtal var som helst, när som helst',

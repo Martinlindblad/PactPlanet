@@ -7,6 +7,8 @@ import {AuthStackParamList} from 'src/types/navigation/AuthStackParamList';
 import {useFirebaseUserAuth} from 'src/contexts/Auth';
 import LoginWithBankID from 'src/scenes/AuthStack/LoginWithBankID';
 import Timeout from 'src/scenes/AuthStack/Timeout';
+import LoginWithOtherMethod from 'src/scenes/AuthStack/LoginWithOtherMethod';
+import CreateAccountEmailPasswordScene from 'src/scenes/AuthStack/CreateAccountEmailPasswordScene';
 
 const Stack = createStackNavigator<AuthStackParamList>();
 
@@ -38,6 +40,22 @@ function AuthStack(): JSX.Element {
       <Stack.Screen
         name="LoginWithBankID"
         component={LoginWithBankID}
+        options={{
+          headerShown: false,
+          presentation: 'modal',
+        }}
+      />
+      <Stack.Screen
+        name="LoginWithOtherMethod"
+        component={LoginWithOtherMethod}
+        options={{
+          headerShown: false,
+          presentation: 'modal',
+        }}
+      />
+      <Stack.Screen
+        name="CreateAccountEmailPassword"
+        component={CreateAccountEmailPasswordScene}
         options={{
           headerShown: false,
           presentation: 'modal',

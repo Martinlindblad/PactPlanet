@@ -11,7 +11,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {NavigationProp, useNavigation} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import {Controller, useForm} from 'react-hook-form';
 import PPText from 'src/components/PPText';
 import {AuthStackParamList} from 'src/types/navigation/AuthStackParamList';
@@ -40,9 +40,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const LoginEmailPassword = ({}: {
-  navigation: NavigationProp<AuthStackParamList, 'LoginEmailPassword'>;
-}): JSX.Element => {
+const LoginEmailPassword = (): JSX.Element => {
   const {top: topInset, bottom: bottomInset} = useSafeAreaInsets();
   const {width: screenWidth, height: screenHeight} = Dimensions.get('screen');
 
