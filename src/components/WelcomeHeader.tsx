@@ -38,7 +38,7 @@ const WelcomeHeader = (): JSX.Element => {
       <View>
         <Text style={styles.headerText}>Pact planet</Text>
         <Text style={styles.subtitle}>Sir.</Text>
-        <Text style={styles.subtitle}>Christoffer Wedemark</Text>
+        <Text style={styles.subtitle}>Christoffer Wedenmark</Text>
       </View>
     </View>
   );
