@@ -1,21 +1,17 @@
 import React from 'react';
-
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-
 import HomeStack from './HomeStack';
 import SettingsStack from './SettingsStack';
-
 const Tab = createBottomTabNavigator();
 
-function BottomTab(): JSX.Element {
+function BottomTab() {
   const {bottom: bottomInset} = useSafeAreaInsets();
 
   return (
     <Tab.Navigator
-      initialRouteName="Overview"
-      screenOptions={({}) => ({
-        headerTransparent: true,
+      initialRouteName="HomeTab"
+      screenOptions={({route}) => ({
         tabBarActiveTintColor: 'blue',
         tabBarInactiveTintColor: 'pink',
         tabBarLabelStyle: {
@@ -48,18 +44,6 @@ function BottomTab(): JSX.Element {
           title: 'Settings',
         }}
       />
-      {/* <Tab.Screen name="Content" component={CalendarStack} />
-      <Tab.Screen
-        name="Forum"
-        component={ForumStack}
-        options={{headerShown: false}}
-      />
-      <Tab.Screen name="Courses" component={CoursesStack} /> */}
-      {/* <Tab.Screen
-        name="More"
-        component={MoreStack}
-        options={{headerShown: false, title: 'Mer'}}
-      /> */}
     </Tab.Navigator>
   );
 }

@@ -30,20 +30,14 @@ const Button: FC<ButtonProps> = ({
   onPress,
   buttonProps,
   disabled,
-  borderStyle,
+
   textStyle,
 }) => {
   const backgroundColors = {
-    primary: ['#00FFFF', '#17C8FF', '#329BFF'],
-    secondary: ['#4CAF50', '#4CAF50'],
+    primary: ['#C3CBDC', '#FFF', '#C3CBDC'],
+    secondary: ['#F9D29D', '#FFF', '#F9D29D'],
     ghost: ['transparent', 'transparent'],
-    link: ['transparent', 'transparent'],
-  };
-  const borderColors = {
-    primary: '#17C8FF',
-    secondary: '#4CAF50',
-    ghost: 'transparent',
-    link: 'transparent',
+    link: ['#cff27e', '#FFF', '#cff27e'],
   };
 
   const buttonStyles = [styles.button, styles[variant], style];
@@ -58,11 +52,7 @@ const Button: FC<ButtonProps> = ({
         colors={backgroundColors[variant]}
         start={{x: 0.0, y: 1.0}}
         end={{x: 1.0, y: 1.5}}
-        style={[
-          borderStyle,
-          styles.border,
-          {borderColor: borderColors[variant]},
-        ]}>
+        style={{borderRadius: 20, paddingHorizontal: 20, paddingVertical: 8}}>
         <Text style={[styles.text, textStyle]}>{text}</Text>
       </LinearGradient>
     </Pressable>
@@ -71,40 +61,27 @@ const Button: FC<ButtonProps> = ({
 
 const styles = StyleSheet.create({
   button: {
-    alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 20,
     minWidth: 100,
     maxHeight: 45,
+    paddingHorizontal: 20,
   },
 
-  primary: {
-    backgroundColor: '#2196F3',
-  },
-  secondary: {
-    backgroundColor: '#4CAF50',
-  },
+  primary: {},
+  secondary: {},
   ghost: {
     backgroundColor: 'transparent',
   },
   link: {
     backgroundColor: 'transparent',
-    borderBottomWidth: 1,
-    borderColor: '#2196F3',
   },
   text: {
     color: '#2f2f2f',
     fontSize: 14,
-    lineHeight: 18,
+    lineHeight: 24,
     fontFamily: 'Commissioner-Bold',
-  },
-  border: {
-    borderRadius: 26,
-    paddingVertical: 6,
-    paddingHorizontal: 16,
-    borderWidth: 2,
-    borderColor: 'white',
-    flexShrink: 1,
+    textAlign: 'center',
   },
 });
 

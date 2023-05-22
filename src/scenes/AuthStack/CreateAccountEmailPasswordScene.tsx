@@ -40,8 +40,8 @@ const styles = StyleSheet.create({
   },
 });
 
-const LoginEmailPassword = ({}: {
-  navigation: NavigationProp<AuthStackParamList, 'LoginEmailPassword'>;
+const Register = ({}: {
+  navigation: NavigationProp<AuthStackParamList, 'Register'>;
 }): JSX.Element => {
   const {top: topInset, bottom: bottomInset} = useSafeAreaInsets();
   const {width: screenWidth, height: screenHeight} = Dimensions.get('screen');
@@ -131,6 +131,15 @@ const LoginEmailPassword = ({}: {
           contentContainerStyle={scrollViewContainerStyle}
           keyboardShouldPersistTaps="handled">
           <View style={{marginTop: 26}}>
+            <PPText
+              style={[
+                styles.inputLabel,
+                {
+                  color: '#2b2b2b',
+                },
+              ]}>
+              E-post
+            </PPText>
             <Controller
               control={control}
               render={({field: {value, onChange}}) => (
@@ -150,20 +159,20 @@ const LoginEmailPassword = ({}: {
                     if (passwordRef?.current) {
                       passwordRef.current.focus();
                     }
-                  }}>
-                  <PPText
-                    style={[
-                      styles.inputLabel,
-                      {
-                        color: '#2b2b2b',
-                      },
-                    ]}>
-                    E-post
-                  </PPText>
-                </TextInput>
+                  }}
+                />
               )}
               name="email"
             />
+            <PPText
+              style={[
+                styles.inputLabel,
+                {
+                  color: '#2b2b2b',
+                },
+              ]}>
+              Lösenord
+            </PPText>
             <Controller
               control={control}
               render={({field: {value, onChange}}) => (
@@ -182,17 +191,8 @@ const LoginEmailPassword = ({}: {
                   secureTextEntry
                   placeholderTextColor={'#BBB'}
                   style={[styles.input]}
-                  onSubmitEditing={handleSubmit(handleCreateAccount)}>
-                  <PPText
-                    style={[
-                      styles.inputLabel,
-                      {
-                        color: '#2b2b2b',
-                      },
-                    ]}>
-                    Lösenord
-                  </PPText>
-                </TextInput>
+                  onSubmitEditing={handleSubmit(handleCreateAccount)}
+                />
               )}
               name="password"
             />
@@ -239,4 +239,4 @@ const LoginEmailPassword = ({}: {
   );
 };
 
-export default LoginEmailPassword;
+export default Register;

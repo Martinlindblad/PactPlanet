@@ -128,6 +128,15 @@ const LoginEmailPassword = (): JSX.Element => {
           contentContainerStyle={scrollViewContainerStyle}
           keyboardShouldPersistTaps="handled">
           <View style={{marginTop: 26}}>
+            <PPText
+              style={[
+                styles.inputLabel,
+                {
+                  color: '#2b2b2b',
+                },
+              ]}>
+              E-post
+            </PPText>
             <Controller
               control={control}
               render={({field: {value, onChange}}) => (
@@ -147,20 +156,20 @@ const LoginEmailPassword = (): JSX.Element => {
                     if (passwordRef?.current) {
                       passwordRef.current.focus();
                     }
-                  }}>
-                  <PPText
-                    style={[
-                      styles.inputLabel,
-                      {
-                        color: '#2b2b2b',
-                      },
-                    ]}>
-                    E-post
-                  </PPText>
-                </TextInput>
+                  }}
+                />
               )}
               name="email"
             />
+            <PPText
+              style={[
+                styles.inputLabel,
+                {
+                  color: '#2b2b2b',
+                },
+              ]}>
+              Lösenord
+            </PPText>
             <Controller
               control={control}
               render={({field: {value, onChange}}) => (
@@ -179,17 +188,8 @@ const LoginEmailPassword = (): JSX.Element => {
                   secureTextEntry
                   placeholderTextColor={'#BBB'}
                   style={[styles.input]}
-                  onSubmitEditing={handleSubmit(handleLogin)}>
-                  <PPText
-                    style={[
-                      styles.inputLabel,
-                      {
-                        color: '#2b2b2b',
-                      },
-                    ]}>
-                    Lösenord
-                  </PPText>
-                </TextInput>
+                  onSubmitEditing={handleSubmit(handleLogin)}
+                />
               )}
               name="password"
             />
@@ -197,7 +197,7 @@ const LoginEmailPassword = (): JSX.Element => {
           <View style={loginButtonContainerStyle}>
             <Button
               disabled={isLoggingIn}
-              text="Logga in"
+              text="Skapa konto"
               style={{marginBottom: 10, paddingVertical: 16, borderWidth: 0}}
               onPress={handleSubmit(handleLogin)}
               variant={'primary'}
@@ -227,7 +227,8 @@ const LoginEmailPassword = (): JSX.Element => {
                 fontWeight: '500',
               },
             ]}>
-            Om du inte har Bank-ID kan du logga in med e-post och lösenord.
+            Om du inte har Bank-ID kan du skapa ett konto med e-post och
+            lösenord.
           </PPText>
         </View>
       </View>

@@ -11,14 +11,14 @@ import com.facebook.soloader.SoLoader;
 import java.util.List;
 
 import android.content.res.Configuration;
+import android.content.res.Configuration;
 import expo.modules.ApplicationLifecycleDispatcher;
 import expo.modules.ReactNativeHostWrapper;
-import expo.modules.ReactActivityDelegateWrapper;
 
 public class MainApplication extends Application implements ReactApplication {
 
     private final ReactNativeHost mReactNativeHost =
-            new DefaultReactNativeHost(this) {
+    new ReactNativeHostWrapper(this, new DefaultReactNativeHost(this) {
                 @Override
                 public boolean getUseDeveloperSupport() {
                     return BuildConfig.DEBUG;
@@ -47,7 +47,7 @@ public class MainApplication extends Application implements ReactApplication {
                 protected Boolean isHermesEnabled() {
                     return BuildConfig.IS_HERMES_ENABLED;
                 }
-            };
+            });
 
     @Override
     public ReactNativeHost getReactNativeHost() {

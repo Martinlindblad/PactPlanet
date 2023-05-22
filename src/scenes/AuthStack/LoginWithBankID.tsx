@@ -1,11 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, ActivityIndicator} from 'react-native';
 
 import {useAppState} from '@react-native-community/hooks';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {useFirebaseUserAuth} from 'src/contexts/Auth';
 import PPText from 'src/components/PPText';
 import {AuthStackParamList} from 'src/types/navigation/AuthStackParamList';
+import RenderIllustration from 'src/components/RenderIllustration';
+
+import BankIDSvG from 'assets/images/BankID_logo.svg';
 
 const styles = StyleSheet.create({
   root: {
@@ -52,7 +55,9 @@ function LoginWithBankID({
 
   return (
     <View style={styles.root}>
-      <PPText>Login with BankID</PPText>
+      <RenderIllustration Svg={BankIDSvG} height={300} width={300} />
+      <ActivityIndicator style={{padding: 20}} size={40} color={'#0054BFFD'} />
+      <PPText>Logga in med BankID</PPText>
     </View>
   );
 }

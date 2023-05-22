@@ -1,10 +1,12 @@
+import React, {useCallback} from 'react';
 import {useNavigation} from '@react-navigation/native';
+import {SafeAreaView, View, StyleSheet, ScrollView, Text} from 'react-native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {LinearGradient} from 'expo-linear-gradient';
-import React, {useCallback} from 'react';
-import {SafeAreaView, View, StyleSheet, ScrollView, Text} from 'react-native';
+import RenderIllustration from 'src/components/RenderIllustration';
 import Button from 'src/components/buttons/Button';
 import {AuthStackParamList} from 'src/types/navigation/AuthStackParamList';
+import AutmosphereSvg from 'assets/svg/atmosphere.svg';
 
 const styles = StyleSheet.create({
   root: {flex: 1},
@@ -12,32 +14,32 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#1d1d1d',
   },
-  buttonContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+
   sectionContainer: {
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row',
     paddingHorizontal: 26,
     width: '100%',
-    paddingVertical: 10,
   },
+
   body: {justifyContent: 'center', alignItems: 'center'},
+
   scrollView: {flex: 1},
+
   contentContainerStyle: {
     flexGrow: 1,
     paddingBottom: 100,
   },
   loggInStatusText: {
     color: '#EAEAEA',
-    fontFamily: 'Commissioner-Bold',
-    paddingHorizontal: 20,
+    fontFamily: 'Commissioner-regular',
     fontSize: 12,
+    lineHeight: 18,
+    paddingHorizontal: 10,
     textAlign: 'center',
   },
-  button: {marginBottom: 10, marginHorizontal: 20},
+  button: {marginBottom: 10},
 
   background: {
     position: 'absolute',
@@ -56,10 +58,9 @@ const styles = StyleSheet.create({
   welcomeTitle: {
     color: '#EAEAEA',
     fontFamily: 'Commissioner-Bold',
-    paddingHorizontal: 20,
-    fontSize: 18,
-    paddingBottom: 20,
-    textAlign: 'center',
+    fontSize: 24,
+    paddingBottom: 30,
+    letterSpacing: 2,
   },
 });
 
@@ -79,8 +80,98 @@ const LoginScene = (): JSX.Element => {
     navigation.navigate('Register');
   }, [navigation]);
 
-  const welcomeText = 'Välkommen till Pact Planet!';
-  const introText = `Kontrollera dina kontrakt enkelt med vår app! ${' '}Logga in för att få åtkomst till våra professionella tjänster och få din affärsjuridik under kontroll.`;
+  const welcomeText = `Skapa tydliga villkor.
+Bygg tillit.
+Uppnå framgång.`;
+  const introText = `Kontrollera dina kontrakt enkelt genom våra tjänster! ${' '}Logga in och få din affärsjuridik under kontroll.`;
+
+  const Header = (): JSX.Element => {
+    return (
+      <View
+        style={{
+          padding: 40,
+          position: 'absolute',
+          width: '100%',
+          height: '50%',
+          marginTop: 100,
+        }}>
+        <View
+          style={{
+            position: 'absolute',
+            alignSelf: 'center',
+          }}>
+          <RenderIllustration Svg={AutmosphereSvg} height={100} width={100} />
+          <View style={{position: 'absolute', alignSelf: 'center'}}>
+            <LinearGradient
+              colors={['transparent', '#0072BFFD']} // Adjust the color here
+              style={{
+                padding: 10,
+                height: 25,
+                width: 25,
+                borderRadius: 50,
+                marginTop: 20,
+              }}
+            />
+          </View>
+          <View style={{position: 'absolute', alignSelf: 'center'}}>
+            <LinearGradient
+              colors={['transparent', '#0064BFFD']} // Adjust the color here
+              style={{
+                padding: 10,
+                height: 75,
+                width: 75,
+                borderRadius: 75,
+                marginTop: 10,
+              }}
+            />
+          </View>
+          <View style={{position: 'absolute', alignSelf: 'center'}}>
+            <LinearGradient
+              colors={['transparent', '#0054BFFD']} // Adjust the color here
+              style={{
+                padding: 10,
+                height: 100,
+                width: 100,
+                borderRadius: 100,
+                shadowColor: '#fff',
+                shadowOffset: {
+                  width: 0,
+                  height: 0,
+                },
+                shadowOpacity: 1.5,
+                shadowRadius: 10,
+                elevation: 45,
+              }}
+            />
+          </View>
+        </View>
+
+        <Text
+          style={{
+            position: 'absolute',
+            color: '#EAEAEA',
+            fontSize: 36,
+            left: 100,
+            fontFamily: 'Condiment-Regular',
+            width: '100%',
+          }}>
+          Pact
+        </Text>
+        <Text
+          style={{
+            position: 'absolute',
+            color: '#EAEAEA',
+            fontSize: 36,
+            left: 245,
+            fontFamily: 'Condiment-Regular',
+            width: '100%',
+            top: 65,
+          }}>
+          Planet
+        </Text>
+      </View>
+    );
+  };
 
   return (
     <View style={styles.root}>
@@ -90,94 +181,11 @@ const LoginScene = (): JSX.Element => {
           colors={['transparent', 'rgba(0,0,0,0.8)']}
           style={styles.background}
         />
-
+        <Header />
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}
           contentContainerStyle={styles.contentContainerStyle}>
-          <View
-            style={{
-              padding: 40,
-              position: 'absolute',
-              width: '100%',
-              height: '50%',
-              marginTop: 100,
-            }}>
-            <View
-              style={{
-                position: 'absolute',
-                alignSelf: 'center',
-              }}>
-              <LinearGradient
-                // Background Linear Gradient
-                colors={['transparent', '#00EAEAEAF']}
-                style={{
-                  padding: 10,
-                  height: 50,
-                  width: 50,
-                  borderRadius: 50,
-                  marginTop: 20,
-                }}
-              />
-            </View>
-            <View style={{position: 'absolute', alignSelf: 'center'}}>
-              <LinearGradient
-                // Background Linear Gradient
-                colors={['transparent', '#329BFF']}
-                style={{
-                  padding: 10,
-                  height: 75,
-                  width: 75,
-                  borderRadius: 75,
-                  marginTop: 10,
-                }}
-              />
-            </View>
-            <View style={{position: 'absolute', alignSelf: 'center'}}>
-              <LinearGradient
-                // Background Linear Gradient
-                colors={['transparent', '#8000FF']}
-                style={{
-                  padding: 10,
-                  height: 100,
-                  width: 100,
-                  borderRadius: 100,
-                  shadowColor: '#fff',
-                  shadowOffset: {
-                    width: 0,
-                    height: 0,
-                  },
-                  shadowOpacity: 1.5,
-                  shadowRadius: 10,
-                  elevation: 45,
-                }}
-              />
-            </View>
-            <Text
-              style={{
-                position: 'absolute',
-                color: '#EAEAEA',
-                fontSize: 36,
-                left: 100,
-                fontFamily: 'Condiment-Regular',
-                width: '100%',
-              }}>
-              Pact
-            </Text>
-            <Text
-              style={{
-                position: 'absolute',
-                color: '#EAEAEA',
-                fontSize: 36,
-                left: 245,
-                fontFamily: 'Condiment-Regular',
-                width: '100%',
-                top: 65,
-              }}>
-              Planet
-            </Text>
-          </View>
-
           <View style={styles.titleContainer}>
             <Text style={styles.welcomeTitle}>{welcomeText}</Text>
 
