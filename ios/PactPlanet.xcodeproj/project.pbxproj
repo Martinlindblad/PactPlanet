@@ -8,29 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* PactPlanetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PactPlanetTests.m */; };
+		0455B044CFF235CF52D99FA1 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0953E95AD224C56F64F372 /* ExpoModulesProvider.swift */; };
+		05B1F54048404D6583D26DDD /* Commissioner-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFBBE959DC0847778B0AAE0C /* Commissioner-SemiBold.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-PactPlanet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-PactPlanet.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1D36A20AAD4B285410E20059 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173A7178B0B69B2EA8321075 /* ExpoModulesProvider.swift */; };
+		1D580156E0504DDCB6A5CD1C /* Commissioner-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CC4024432884203997C09A4 /* Commissioner-Black.ttf */; };
+		2B36E0899D4D4E11AB8722D6 /* Commissioner-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86A204F9EEB7494E8BD3C941 /* Commissioner-Medium.ttf */; };
+		437425986AF24D47955FFB3F /* Commissioner-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4290039430E44F5BFCB99AE /* Commissioner-Thin.ttf */; };
+		4541CF84C6E94628BAE5073B /* Commissioner-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E10F43F4F844926B00629DC /* Commissioner-ExtraLight.ttf */; };
+		506A50039B2044948903FAFC /* Condiment-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47AD857399EF41C4BFC34A82 /* Condiment-Regular.ttf */; };
+		5BEE8935187A41E3A6E48FF7 /* Commissioner-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D96FEB13D2F940DBB1056431 /* Commissioner-Light.ttf */; };
+		742933CBACA742D085CD8CCF /* Commissioner-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0BE9512AF124A2D92492B47 /* Commissioner-Bold.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-PactPlanet-PactPlanetTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-PactPlanet-PactPlanetTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		1D580156E0504DDCB6A5CD1C /* Commissioner-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CC4024432884203997C09A4 /* Commissioner-Black.ttf */; };
-		742933CBACA742D085CD8CCF /* Commissioner-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0BE9512AF124A2D92492B47 /* Commissioner-Bold.ttf */; };
-		C3137119CEBD48B4BDDC646C /* Commissioner-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BBD682DA2DC46158EB8A4F2 /* Commissioner-ExtraBold.ttf */; };
-		4541CF84C6E94628BAE5073B /* Commissioner-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E10F43F4F844926B00629DC /* Commissioner-ExtraLight.ttf */; };
-		5BEE8935187A41E3A6E48FF7 /* Commissioner-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D96FEB13D2F940DBB1056431 /* Commissioner-Light.ttf */; };
-		2B36E0899D4D4E11AB8722D6 /* Commissioner-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86A204F9EEB7494E8BD3C941 /* Commissioner-Medium.ttf */; };
-		A8306748A49F43B3B6CD5CE5 /* Commissioner-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 035A2B67F726436EAAD7125D /* Commissioner-Regular.ttf */; };
-		05B1F54048404D6583D26DDD /* Commissioner-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFBBE959DC0847778B0AAE0C /* Commissioner-SemiBold.ttf */; };
-		437425986AF24D47955FFB3F /* Commissioner-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4290039430E44F5BFCB99AE /* Commissioner-Thin.ttf */; };
-		506A50039B2044948903FAFC /* Condiment-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47AD857399EF41C4BFC34A82 /* Condiment-Regular.ttf */; };
 		82C8A0B3260447D493DF14B1 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A83E766A2D448F396186A89 /* OFL.txt */; };
+		A8306748A49F43B3B6CD5CE5 /* Commissioner-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 035A2B67F726436EAAD7125D /* Commissioner-Regular.ttf */; };
+		C3137119CEBD48B4BDDC646C /* Commissioner-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BBD682DA2DC46158EB8A4F2 /* Commissioner-ExtraBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = PactPlanet;
@@ -41,31 +43,33 @@
 		00E356EE1AD99517003FC87E /* PactPlanetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PactPlanetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PactPlanetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PactPlanetTests.m; sourceTree = "<group>"; };
+		035A2B67F726436EAAD7125D /* Commissioner-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Commissioner-Regular.ttf"; path = "../assets/fonts/Commissioner-Regular.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* PactPlanet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PactPlanet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PactPlanet/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = PactPlanet/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PactPlanet/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = PactPlanet/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = PactPlanet/main.m; sourceTree = "<group>"; };
+		173A7178B0B69B2EA8321075 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-PactPlanet-PactPlanetTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-PactPlanet-PactPlanetTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PactPlanet-PactPlanetTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A83E766A2D448F396186A89 /* OFL.txt */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = OFL.txt; path = ../assets/fonts/OFL.txt; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-PactPlanet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PactPlanet.debug.xcconfig"; path = "Target Support Files/Pods-PactPlanet/Pods-PactPlanet.debug.xcconfig"; sourceTree = "<group>"; };
+		47AD857399EF41C4BFC34A82 /* Condiment-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Condiment-Regular.ttf"; path = "../assets/fonts/Condiment-Regular.ttf"; sourceTree = "<group>"; };
+		4A0953E95AD224C56F64F372 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-PactPlanet/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		4E10F43F4F844926B00629DC /* Commissioner-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Commissioner-ExtraLight.ttf"; path = "../assets/fonts/Commissioner-ExtraLight.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-PactPlanet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PactPlanet.release.xcconfig"; path = "Target Support Files/Pods-PactPlanet/Pods-PactPlanet.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-PactPlanet-PactPlanetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PactPlanet-PactPlanetTests.debug.xcconfig"; path = "Target Support Files/Pods-PactPlanet-PactPlanetTests/Pods-PactPlanet-PactPlanetTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5BBD682DA2DC46158EB8A4F2 /* Commissioner-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Commissioner-ExtraBold.ttf"; path = "../assets/fonts/Commissioner-ExtraBold.ttf"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-PactPlanet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PactPlanet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PactPlanet/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		86A204F9EEB7494E8BD3C941 /* Commissioner-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Commissioner-Medium.ttf"; path = "../assets/fonts/Commissioner-Medium.ttf"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-PactPlanet-PactPlanetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PactPlanet-PactPlanetTests.release.xcconfig"; path = "Target Support Files/Pods-PactPlanet-PactPlanetTests/Pods-PactPlanet-PactPlanetTests.release.xcconfig"; sourceTree = "<group>"; };
+		9CC4024432884203997C09A4 /* Commissioner-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Commissioner-Black.ttf"; path = "../assets/fonts/Commissioner-Black.ttf"; sourceTree = "<group>"; };
+		B0BE9512AF124A2D92492B47 /* Commissioner-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Commissioner-Bold.ttf"; path = "../assets/fonts/Commissioner-Bold.ttf"; sourceTree = "<group>"; };
+		B4290039430E44F5BFCB99AE /* Commissioner-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Commissioner-Thin.ttf"; path = "../assets/fonts/Commissioner-Thin.ttf"; sourceTree = "<group>"; };
+		D96FEB13D2F940DBB1056431 /* Commissioner-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Commissioner-Light.ttf"; path = "../assets/fonts/Commissioner-Light.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		9CC4024432884203997C09A4 /* Commissioner-Black.ttf */ = {isa = PBXFileReference; name = "Commissioner-Black.ttf"; path = "../assets/fonts/Commissioner-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B0BE9512AF124A2D92492B47 /* Commissioner-Bold.ttf */ = {isa = PBXFileReference; name = "Commissioner-Bold.ttf"; path = "../assets/fonts/Commissioner-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5BBD682DA2DC46158EB8A4F2 /* Commissioner-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Commissioner-ExtraBold.ttf"; path = "../assets/fonts/Commissioner-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4E10F43F4F844926B00629DC /* Commissioner-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Commissioner-ExtraLight.ttf"; path = "../assets/fonts/Commissioner-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D96FEB13D2F940DBB1056431 /* Commissioner-Light.ttf */ = {isa = PBXFileReference; name = "Commissioner-Light.ttf"; path = "../assets/fonts/Commissioner-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		86A204F9EEB7494E8BD3C941 /* Commissioner-Medium.ttf */ = {isa = PBXFileReference; name = "Commissioner-Medium.ttf"; path = "../assets/fonts/Commissioner-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		035A2B67F726436EAAD7125D /* Commissioner-Regular.ttf */ = {isa = PBXFileReference; name = "Commissioner-Regular.ttf"; path = "../assets/fonts/Commissioner-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		EFBBE959DC0847778B0AAE0C /* Commissioner-SemiBold.ttf */ = {isa = PBXFileReference; name = "Commissioner-SemiBold.ttf"; path = "../assets/fonts/Commissioner-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B4290039430E44F5BFCB99AE /* Commissioner-Thin.ttf */ = {isa = PBXFileReference; name = "Commissioner-Thin.ttf"; path = "../assets/fonts/Commissioner-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		47AD857399EF41C4BFC34A82 /* Condiment-Regular.ttf */ = {isa = PBXFileReference; name = "Condiment-Regular.ttf"; path = "../assets/fonts/Condiment-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3A83E766A2D448F396186A89 /* OFL.txt */ = {isa = PBXFileReference; name = OFL.txt; path = ../assets/fonts/OFL.txt; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EFBBE959DC0847778B0AAE0C /* Commissioner-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Commissioner-SemiBold.ttf"; path = "../assets/fonts/Commissioner-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,15 @@
 			name = PactPlanet;
 			sourceTree = "<group>";
 		};
+		16ED988073E6A2B5D26693CC /* ExpoModulesProviders */ = {
+			isa = PBXGroup;
+			children = (
+				937A346F8A3BE822BB472D95 /* PactPlanet */,
+				C4429AFBF2C3C868E2C3DB34 /* PactPlanetTests */,
+			);
+			name = ExpoModulesProviders;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,7 +148,7 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
-		83CBB9F61A601CBA00E9B192 /* PBXGroup */ = {
+		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
 				13B07FAE1A68108700A75B9A /* PactPlanet */,
@@ -145,6 +158,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
 				DC858492D5704D8F89A0CCF8 /* Resources */,
+				16ED988073E6A2B5D26693CC /* ExpoModulesProviders */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -160,6 +174,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		937A346F8A3BE822BB472D95 /* PactPlanet */ = {
+			isa = PBXGroup;
+			children = (
+				4A0953E95AD224C56F64F372 /* ExpoModulesProvider.swift */,
+			);
+			name = PactPlanet;
+			sourceTree = "<group>";
+		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +191,14 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-PactPlanet-PactPlanetTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C4429AFBF2C3C868E2C3DB34 /* PactPlanetTests */ = {
+			isa = PBXGroup;
+			children = (
+				173A7178B0B69B2EA8321075 /* ExpoModulesProvider.swift */,
+			);
+			name = PactPlanetTests;
 			sourceTree = "<group>";
 		};
 		DC858492D5704D8F89A0CCF8 /* Resources */ = {
@@ -187,8 +217,8 @@
 				3A83E766A2D448F396186A89 /* OFL.txt */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
 			path = "";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -240,14 +270,14 @@
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		83CBB9F71A601CBA00E9B192 = {
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 13B07F861A680F5B00A75B9A /* PactPlanet */;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1120;
@@ -262,7 +292,7 @@
 				en,
 				Base,
 			);
-			mainGroup = 83CBB9F61A601CBA00E9B192 /* PBXGroup */;
+			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -472,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E356F31AD99517003FC87E /* PactPlanetTests.m in Sources */,
+				1D36A20AAD4B285410E20059 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +512,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				0455B044CFF235CF52D99FA1 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +548,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PactPlanet.app/PactPlanet";
@@ -540,6 +573,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PactPlanet.app/PactPlanet";
@@ -565,6 +599,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PactPlanet;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -591,6 +626,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = PactPlanet;
 				SWIFT_VERSION = 5.0;
@@ -767,5 +803,5 @@
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 83CBB9F71A601CBA00E9B192;
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }
