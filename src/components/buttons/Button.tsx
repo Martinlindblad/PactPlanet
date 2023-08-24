@@ -1,4 +1,3 @@
-import {LinearGradient} from 'expo-linear-gradient';
 import React, {FC} from 'react';
 import {
   Pressable,
@@ -48,13 +47,13 @@ const Button: FC<ButtonProps> = ({
       disabled={disabled}
       onPress={onPress}
       style={({pressed}) => [{opacity: pressed ? 0.5 : 1}, buttonStyles]}>
-      <LinearGradient
+      {/* <LinearGradient
         colors={backgroundColors[variant]}
         start={{x: 0.0, y: 1.0}}
         end={{x: 1.0, y: 1.5}}
         style={{borderRadius: 20, paddingHorizontal: 20, paddingVertical: 8}}>
         <Text style={[styles.text, textStyle]}>{text}</Text>
-      </LinearGradient>
+      </LinearGradient> */}
     </Pressable>
   );
 };

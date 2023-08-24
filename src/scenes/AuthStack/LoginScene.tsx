@@ -2,7 +2,6 @@ import React, {useCallback} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {SafeAreaView, View, StyleSheet, ScrollView, Text} from 'react-native';
 import {StackNavigationProp} from '@react-navigation/stack';
-import {LinearGradient} from 'expo-linear-gradient';
 import RenderIllustration from 'src/components/RenderIllustration';
 import Button from 'src/components/buttons/Button';
 import {AuthStackParamList} from 'src/types/navigation/AuthStackParamList';
@@ -176,11 +175,11 @@ Uppnå framgång.`;
   return (
     <View style={styles.root}>
       <SafeAreaView style={styles.content}>
-        <LinearGradient
+        {/* <LinearGradient
           // Background Linear Gradient
           colors={['transparent', 'rgba(0,0,0,0.8)']}
           style={styles.background}
-        />
+        /> */}
         <Header />
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
