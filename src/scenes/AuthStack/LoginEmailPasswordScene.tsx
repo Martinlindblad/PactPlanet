@@ -29,14 +29,15 @@ const styles = StyleSheet.create({
   input: {
     width: '100%',
     fontWeight: '400',
-    paddingBottom: 21,
     borderWidth: 0,
+    backgroundColor: 'white',
     borderRadius: 16,
   },
   inputLabel: {
     fontSize: 14,
     fontWeight: '700',
     marginBottom: 3,
+    paddingVertical: 10,
   },
 });
 
@@ -45,9 +46,11 @@ const LoginEmailPassword = (): JSX.Element => {
   const {width: screenWidth, height: screenHeight} = Dimensions.get('screen');
 
   const navigation =
-    useNavigation<
-      StackNavigationProp<AuthStackParamList, 'LoginEmailPassword'>
-    >();
+    useNavigation<StackNavigationProp<AuthStackParamList, 'Auth'>>();
+
+  const navigateToHomeTab = useCallback(() => {
+    return navigation.navigate('Content', {screen: 'HomeTab'});
+  }, [navigation]);
 
   const passwordRef = useRef<TextInput>(null);
 
@@ -56,9 +59,9 @@ const LoginEmailPassword = (): JSX.Element => {
 
   useEffect(() => {
     if (currentUser) {
-      navigation.navigate('Home');
+      navigateToHomeTab();
     }
-  }, [currentUser, navigation]);
+  }, [currentUser, navigateToHomeTab, navigation]);
   const [isLoggingIn, setIsLoggingIn] = useState(false);
   const [_error, setError] = useState<AxiosError<{
     error: string;
@@ -197,8 +200,7 @@ const LoginEmailPassword = (): JSX.Element => {
           <View style={loginButtonContainerStyle}>
             <Button
               disabled={isLoggingIn}
-              text="Skapa konto"
-              style={{marginBottom: 10, paddingVertical: 16, borderWidth: 0}}
+              text="Logga in"
               onPress={handleSubmit(handleLogin)}
               variant={'primary'}
             />

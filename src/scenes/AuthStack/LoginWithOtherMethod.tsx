@@ -8,7 +8,7 @@ import Button from 'src/components/buttons/Button';
 import RenderIllustration from 'src/components/RenderIllustration';
 import {AuthStackParamList} from 'src/types/navigation/AuthStackParamList';
 
-import SignUp from '../../../assets/svg/illustrations/sign_up.svg';
+import ShowingSupport from '../../../assets/svg/illustrations/showing_support.svg';
 import PPText from 'src/components/PPText';
 
 const styles = StyleSheet.create({
@@ -103,19 +103,15 @@ const LoginWithOtherMethod = (): JSX.Element => {
       <View style={styles.root}>
         <View style={styles.header}>
           <View style={styles.titleContainer}>
-            <PPText style={styles.welcomeTitle}>
-              Bara ett steg från att bli medlem i Sveriges största nätverk för
-              liksinnade entreprenörer
-            </PPText>
+            <PPText style={styles.welcomeTitle}>Välkommen tillbaka!</PPText>
           </View>
-          <RenderIllustration Svg={SignUp} />
+          <RenderIllustration Svg={ShowingSupport} />
         </View>
         <ScrollView style={styles.scrollView}>
           <View style={styles.content}>
             <PPText style={styles.terms}>
-              Genom att acceptera våra tydliga och rättvisa villkor etablerar vi
-              förtroende och förståelse. Låt oss samarbeta för ömsesidig
-              framgång.
+              Genom att logga in godkänner du våra användarvillkor och vår
+              integritetspolicy.
             </PPText>
             <View style={styles.buttonContainer}>
               <Button
@@ -125,10 +121,12 @@ const LoginWithOtherMethod = (): JSX.Element => {
                 }}
                 text="Facebook"
                 variant="primary"
+                disabled
               />
               <Button
                 variant="secondary"
                 style={styles.button}
+                disabled
                 onPress={() => {
                   navigation.navigate('LoginEmailPassword');
                 }}

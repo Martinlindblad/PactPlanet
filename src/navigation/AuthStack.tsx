@@ -19,7 +19,7 @@ function AuthStack(): JSX.Element {
     <Stack.Navigator
       screenOptions={{
         headerBackTitleVisible: false,
-        headerShown: false,
+        // headerShown: false,
         headerTitleAllowFontScaling: false,
       }}
       initialRouteName={currentUser ? 'Timeout' : 'Login'}>
@@ -49,7 +49,7 @@ function AuthStack(): JSX.Element {
         name="LoginWithOtherMethod"
         component={LoginWithOtherMethod}
         options={{
-          headerShown: false,
+          // headerShown: false,
           presentation: 'modal',
         }}
       />
@@ -57,7 +57,7 @@ function AuthStack(): JSX.Element {
         name="Register"
         component={Register}
         options={{
-          headerShown: false,
+          // headerShown: false,
           presentation: 'modal',
         }}
       />

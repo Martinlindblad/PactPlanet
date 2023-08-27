@@ -8,6 +8,7 @@ import {
   PressableProps,
   TextStyle,
 } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 type ButtonVariant = 'primary' | 'secondary' | 'link' | 'ghost';
 
@@ -29,14 +30,13 @@ const Button: FC<ButtonProps> = ({
   onPress,
   buttonProps,
   disabled,
-
   textStyle,
 }) => {
   const backgroundColors = {
-    primary: ['#C3CBDC', '#FFF', '#C3CBDC'],
-    secondary: ['#F9D29D', '#FFF', '#F9D29D'],
+    primary: ['#5368A2', '#5368A2'],
+    secondary: ['#E18E6F', '#E18E6F'],
     ghost: ['transparent', 'transparent'],
-    link: ['#cff27e', '#FFF', '#cff27e'],
+    link: ['#49C789', '#49C789'],
   };
 
   const buttonStyles = [styles.button, styles[variant], style];
@@ -46,14 +46,17 @@ const Button: FC<ButtonProps> = ({
       {...buttonProps}
       disabled={disabled}
       onPress={onPress}
-      style={({pressed}) => [{opacity: pressed ? 0.5 : 1}, buttonStyles]}>
-      {/* <LinearGradient
+      style={({pressed}) => [
+        {opacity: pressed || disabled ? 0.8 : 1},
+        buttonStyles,
+      ]}>
+      <LinearGradient
         colors={backgroundColors[variant]}
-        start={{x: 0.0, y: 1.0}}
-        end={{x: 1.0, y: 1.5}}
-        style={{borderRadius: 20, paddingHorizontal: 20, paddingVertical: 8}}>
+        start={{x: 0.0, y: 0.5}}
+        end={{x: 1.0, y: 0.5}}
+        style={styles.gradient}>
         <Text style={[styles.text, textStyle]}>{text}</Text>
-      </LinearGradient> */}
+      </LinearGradient>
     </Pressable>
   );
 };
@@ -63,10 +66,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 20,
     minWidth: 100,
-    maxHeight: 45,
+    height: 45,
     paddingHorizontal: 20,
   },
-
   primary: {},
   secondary: {},
   ghost: {
@@ -75,10 +77,16 @@ const styles = StyleSheet.create({
   link: {
     backgroundColor: 'transparent',
   },
+  gradient: {
+    borderRadius: 20,
+    overflow: 'hidden',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100%',
+  },
   text: {
-    color: '#2f2f2f',
+    color: '#FFFFFF',
     fontSize: 14,
-    lineHeight: 24,
     fontFamily: 'Commissioner-Bold',
     textAlign: 'center',
   },

@@ -11,7 +11,7 @@ function HomeStack(): JSX.Element {
   //   const safeAreaInsets = useSafeAreaInsets();
 
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="Home">
       <Stack.Screen
         name="Home"
         component={HomeScene}

@@ -29,14 +29,18 @@ const styles = StyleSheet.create({
   input: {
     width: '100%',
     fontWeight: '400',
-    paddingBottom: 21,
     borderWidth: 0,
+    backgroundColor: 'white',
     borderRadius: 16,
   },
   inputLabel: {
     fontSize: 14,
     fontWeight: '700',
     marginBottom: 3,
+    paddingVertical: 10,
+  },
+  informationContainer: {
+    paddingTop: 60,
   },
 });
 
@@ -58,7 +62,7 @@ const Register = ({}: {
 
   useEffect(() => {
     if (currentUser) {
-      navigation.navigate('Home');
+      navigation.navigate('HomeTab');
     }
   }, [currentUser, navigation]);
 
@@ -116,7 +120,7 @@ const Register = ({}: {
   const scrollViewContainerStyle = useMemo(() => {
     return {
       paddingTop: 20,
-      paddingBottom: bottomInset,
+      paddingBottom: bottomInset + 40,
       paddingHorizontal: 20,
     };
   }, [bottomInset]);
@@ -201,7 +205,6 @@ const Register = ({}: {
             <Button
               disabled={isCreating}
               text="Skapa konto"
-              style={{marginBottom: 10, paddingVertical: 16, borderWidth: 0}}
               onPress={handleSubmit(handleCreateAccount)}
               variant={'primary'}
             />
@@ -211,30 +214,29 @@ const Register = ({}: {
               </View>
             )}
           </View>
+          <View style={styles.informationContainer}>
+            <View style={[topSectionStyle, {alignSelf: 'center'}]}>
+              <PPText
+                style={{
+                  color: '#2b2b2b',
+                }}>
+                Information
+              </PPText>
+              <PPText
+                style={[
+                  {
+                    paddingTop: 10,
+                    fontSize: 16,
+                    fontWeight: '500',
+                  },
+                ]}>
+                Om du inte har Bank-ID kan du skapa ett konto med e-post och
+                lösenord.
+              </PPText>
+            </View>
+          </View>
         </ScrollView>
       </KeyboardAvoidingView>
-
-      <View>
-        <View style={[topSectionStyle, {alignSelf: 'center'}]}>
-          <PPText
-            style={{
-              color: '#2b2b2b',
-            }}>
-            Information
-          </PPText>
-          <PPText
-            style={[
-              {
-                paddingTop: 10,
-                fontSize: 16,
-                fontWeight: '500',
-              },
-            ]}>
-            Om du inte har Bank-ID kan du skapa ett konto med e-post och
-            lösenord.
-          </PPText>
-        </View>
-      </View>
     </View>
   );
 };

@@ -6,6 +6,7 @@ import RenderIllustration from 'src/components/RenderIllustration';
 import Button from 'src/components/buttons/Button';
 import {AuthStackParamList} from 'src/types/navigation/AuthStackParamList';
 import AutmosphereSvg from 'assets/svg/atmosphere.svg';
+import LinearGradient from 'react-native-linear-gradient';
 
 const styles = StyleSheet.create({
   root: {flex: 1},
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     textAlign: 'center',
   },
-  button: {marginBottom: 10},
+  button: {marginBottom: 10, paddingHorizontal: 20, minWidth: 180},
 
   background: {
     position: 'absolute',
@@ -175,11 +176,11 @@ Uppnå framgång.`;
   return (
     <View style={styles.root}>
       <SafeAreaView style={styles.content}>
-        {/* <LinearGradient
+        <LinearGradient
           // Background Linear Gradient
           colors={['transparent', 'rgba(0,0,0,0.8)']}
           style={styles.background}
-        /> */}
+        />
         <Header />
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"

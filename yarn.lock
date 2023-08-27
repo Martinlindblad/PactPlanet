@@ -2193,6 +2193,11 @@
   resolved "https://registry.yarnpkg.com/@react-native-firebase/auth/-/auth-15.7.1.tgz#6bfc3be0f1bc3503382593a9c9dbd08b4e21e07e"
   integrity sha512-KtxVcoIpZX5aT0rNaHWo733dP8cCZUBNV90FboapyvasQ5qZdMu+xS2yYe8FdimUlMlzGhMmLyXTxghGmVIZjw==
 
+"@react-native-firebase/firestore@^18.3.1":
+  version "18.3.1"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/firestore/-/firestore-18.3.1.tgz#337304eee2570bfe58d66dba19d2c1a0ba865b1f"
+  integrity sha512-+ot8gdZufsfXGbqW6F4sORxEPXhW2l/LnbJBKxhCVM+w0FikYJJu3VtEneumvojNP4KC0Ci+xn6aCvI5qkqZ6Q==
+
 "@react-native/assets@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@react-native/assets/-/assets-1.0.0.tgz#c6f9bf63d274bafc8e970628de24986b30a55c8e"
@@ -7029,6 +7034,11 @@ react-native-gradle-plugin@^0.71.18:
   version "0.71.18"
   resolved "https://registry.yarnpkg.com/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.18.tgz#20ef199bc85be32e45bb6cc069ec2e7dcb1a74a6"
   integrity sha512-7F6bD7B8Xsn3JllxcwHhFcsl9aHIig47+3eN4IHFNqfLhZr++3ElDrcqfMzugM+niWbaMi7bJ0kAkAL8eCpdWg==
+
+react-native-linear-gradient@^2.8.2:
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.8.2.tgz#9811c91751be673ef928ef4aa3ff3a70b82935d6"
+  integrity sha512-hgmCsgzd58WNcDCyPtKrvxsaoETjb/jLGxis/dmU3Aqm2u4ICIduj4ECjbil7B7pm9OnuTkmpwXu08XV2mpg8g==
 
 react-native-reanimated@^3.1.0:
   version "3.1.0"

@@ -5,12 +5,18 @@ import HomeStack from './HomeStack';
 import SettingsStack from './SettingsStack';
 const Tab = createBottomTabNavigator();
 
+export type BottomTabParamList = {
+  HomeTab: undefined;
+  SettingsTab: undefined;
+};
+
 function BottomTab() {
   const {bottom: bottomInset} = useSafeAreaInsets();
 
   return (
     <Tab.Navigator
       initialRouteName="HomeTab"
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       screenOptions={({route}) => ({
         tabBarActiveTintColor: 'blue',
         tabBarInactiveTintColor: 'pink',

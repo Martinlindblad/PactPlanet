@@ -1,7 +1,8 @@
 import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View, StyleSheet, ActivityIndicator} from 'react-native';
 import RenderIllustration from './RenderIllustration';
 import creation_process from 'assets/svg/illustrations/creation_process.svg';
+import {useFirebaseUserAuth} from 'src/contexts/Auth';
 
 const styles = StyleSheet.create({
   welcomeContainer: {
@@ -33,14 +34,22 @@ const styles = StyleSheet.create({
 });
 
 const WelcomeHeader = (): JSX.Element => {
+  const {initializing, currentUser} = useFirebaseUserAuth();
+
   return (
     <View style={styles.welcomeContainer}>
       <RenderIllustration Svg={creation_process} />
-      <View>
-        <Text style={styles.headerText}>Pact planet</Text>
-        <Text style={styles.subtitle}>Sir.</Text>
-        <Text style={styles.subtitle}>Christoffer Wedenmark</Text>
-      </View>
+      {initializing ? (
+        <View>
+          <ActivityIndicator size="large" color="#00ff00" />
+        </View>
+      ) : (
+        <View>
+          <Text style={styles.headerText}>Pact planet</Text>
+          <Text style={styles.subtitle}>Sir.</Text>
+          <Text style={styles.subtitle}>{currentUser?.email}</Text>
+        </View>
+      )}
     </View>
   );
 };
